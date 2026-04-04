@@ -737,6 +737,24 @@ body {
 
   .hero-overlay {
     padding: 0 6% 0 6%;
+    /* On portrait (mobile) centre text at bottom third so animation is visible */
+    align-items: flex-end;
+    padding-bottom: 14vh;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-badge {
+    /* Keep badge centred */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .progress-dots {
