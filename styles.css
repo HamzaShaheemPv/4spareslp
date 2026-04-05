@@ -765,3 +765,141 @@ body {
     bottom: 24px;
   }
 }
+
+
+/* ===== ANIMATION-END OVERLAY ===== */
+.anim-end-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anim-end-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.anim-end-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 20px 24px;
+  transform: translateY(24px);
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anim-end-overlay.visible .anim-end-card {
+  transform: translateY(0);
+}
+
+.anim-end-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.anim-end-logo span {
+  color: var(--orange);
+}
+
+.anim-end-tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.anim-end-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  line-height: 1.25;
+}
+
+.store-btn small {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.store-btn.playstore {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.store-btn.appstore {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.store-btn.browser {
+  background: rgba(255, 107, 0, 0.25);
+  border-color: rgba(255, 107, 0, 0.55);
+}
+
+.store-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+}
+
+.store-btn.playstore:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.store-btn.appstore:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.store-btn.browser:hover {
+  background: rgba(255, 107, 0, 0.45);
+  border-color: var(--orange);
+  box-shadow: 0 10px 32px rgba(255, 107, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .anim-end-btns {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .store-btn {
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    border-radius: 16px;
+  }
+}
