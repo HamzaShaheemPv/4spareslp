@@ -580,9 +580,9 @@
       portrait: {
         folder: 'portanim',
         totalFrames: 175,
-        // Portrait frames have no watermark to crop — full image used
-        cropRight: 1.0,
-        cropBottom: 1.0,
+        // Crop 5% right + 8% bottom to remove bottom-right corner watermark
+        cropRight: 0.95,
+        cropBottom: 0.92,
       },
       landscape: {
         folder: 'heroanimation',
