@@ -212,6 +212,15 @@
   }
   </script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2PK2XK1KGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-2PK2XK1KGK');
+</script>
 
 <body>
 
@@ -580,9 +589,9 @@
       portrait: {
         folder: 'portanim',
         totalFrames: 175,
-        // Crop 5% right + 8% bottom to remove bottom-right corner watermark
-        cropRight: 0.95,
-        cropBottom: 0.92,
+        // Portrait frames have no watermark to crop — full image used
+        cropRight: 1.0,
+        cropBottom: 1.0,
       },
       landscape: {
         folder: 'heroanimation',
